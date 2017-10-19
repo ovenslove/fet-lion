@@ -1,0 +1,24 @@
+<!-- 此组件为对外父组件，不得删除 -->
+<template name='dialog'>
+    <view class="dialogContainer {{type==='modal'?'':'disEvents'}}" wx-if="{{show}}">
+            <view wx-if="{{mask}}" class="maskContainer" catchtap="maskCancleFn"></view>
+            <template wx-if="{{type==='tips'}}" is="tips" data="{{type,text,position,textAlgin}}"></template>
+            <template wx-if="{{type==='modal'}}"  is="modal" data="{{title,text,textAlgin,showCancle,submitText,cancleText,submitTextColor,submitBackgroundColor,cancleTextColor,cancleBackgroundColor}}"></template>           
+    </view>
+</template>
+
+<!-- 以下为子组件 -->
+<template name='tips'>
+        <view class="tipsContainer {{position}} {{textAlgin}}">{{text}}</view>
+</template>
+
+<template name='modal'>
+        <view class="modalContainer">
+            <view wx-if="{{title!==''}}" class="titleContainer" wx-if="{{title}}">{{title}}</view>
+            <view class="contentContainer {{textAlgin}}">{{text}}</view>
+            <view class="btnsContainer">
+                <view wx-if="{{showCancle}}" style="color:{{cancleTextColor}};background:{{cancleBackgroundColor}}" class="btns cancle" hover="true" hover-class="btnsHover" hover-start-time="50" hover-stay-time="200" catchtap="dialogFail">{{cancleText}}</view>
+                <view class="btns submit" style="color:{{submitTextColor}};background:{{submitBackgroundColor}}"  hover="true" hover-class="btnsHover" hover-start-time="50" hover-stay-time="200" catchtap="dialogSuccess">{{submitText}}</view>
+            </view>
+        </view>
+</template>

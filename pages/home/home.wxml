@@ -1,0 +1,66 @@
+<view class="homeContainer">
+    <view class="userContainer" bindtap="goUserInfo">
+        <view class="mainContainer">
+            <view class="userLogoContainer">
+                <image src="https://static-oven.b0.upaiyun.com/static-image/mylogo.png"></image>
+            </view>
+            <view class="userInfoContainer">
+                <view class="userNameContainer">张三李四</view>
+                <view class="jobContainer">
+                    <view class="occupation">前端开发工程师</view>
+                    <view class="company">考拉先生</view>
+                </view>
+            </view>
+        </view>
+        <view class="sideContainer">
+            <view class="directorRight"></view>
+        </view>
+    </view>
+    <view class="listSettingContainer ">
+        <view class="simClumnContainer">
+            <view class="mainContainer">
+                <view class="settingContainer">
+                    <image src="/public/icon/love-blue.png"></image>
+                    <view>我喜欢的</view>
+                </view>
+            </view>
+            <view class="sideContainer">99篇</view>
+        </view>
+        <view class="simClumnContainer">
+            <view class="mainContainer">
+                <view class="settingContainer">
+                    <image src="/public/icon/eye.png"></image>
+                    <view>阅读过的文章</view>
+                </view>
+            </view>
+            <view class="sideContainer">999篇</view>
+        </view>
+        <view class="simClumnContainer">
+            <view class="mainContainer">
+                <view class="settingContainer">
+                    <image src="/public/icon/mark.png"></image>
+                    <view>标签管理</view>
+                </view>
+            </view>
+            <view class="sideContainer">99个</view>
+        </view>
+    </view>
+    <view class="listSettingContainer ">
+            <view class="simClumnContainer">
+                <view class="mainContainer">
+                    <view class="settingContainer">
+                        <image src="/public/icon/question.png"></image>
+                        <view>意见反馈</view>
+                    </view>
+                </view>
+            </view>
+            <view class="simClumnContainer">
+                <view class="mainContainer">
+                    <view class="settingContainer">
+                        <image src="/public/icon/setting.png"></image>
+                        <view>设置</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+</view>

@@ -1,0 +1,36 @@
+<view class="userContainer">
+    <view class="listGroupContainer">
+        <view class="listItemContainer">
+            <view class="label">头像</view>
+            <view class="content">
+                <image class="userLogo" src="https://static-oven.b0.upaiyun.com/static-image/mylogo.png"></image>
+            </view>
+        </view>
+        <view class="listItemContainer">
+            <view class="label">用户名</view>
+            <view class="content">张三李四</view>
+        </view>
+        <view class="listItemContainer">
+            <view class="label">职位</view>
+            <view class="content">
+                <picker bindchange="occupationPickerChange" value="{{occupationIndex}}" range="{{occupationData}}">
+                    <view class="picker">
+                        {{occupationData[occupationIndex]}}
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class="listItemContainer">
+            <view class="label">公司</view>
+            <view class="content">考拉先生</view>
+        </view>
+        <view class="listItemContainer">
+            <view class="label">简介</view>
+            <view class="content">我是一只快乐的小青蛙</view>
+        </view>
+        <view class="listItemContainer">
+            <view class="label">博客地址</view>
+            <view class="content">https://wp.jqstudy.cn</view>
+        </view>
+    </view>
+</view>

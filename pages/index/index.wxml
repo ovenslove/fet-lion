@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<import src="/templates/dialog/dialog.wxml"/>
+<import src="/templates/blog/blog.wxml"/>
+
+<view class="indexContainer">
+  <view class="topMenuContainer">
+    <scroll-view class="menuContainer" scroll-x="true" scroll-left="{{swiperMenuData.swiperScrollLeft}}">
+        <block wx:for="{{swiperData}}">
+            <view class="simMenuItem {{index===swiperMenuData.swiperIndex?'active':''}}" data-index="{{index}}" bindtap="menuChangeFn">{{item.name}}</view>
+          </block>
+    </scroll-view>
+    <view class="sideMenuContainer">
+      <view class="rightBtnIcon"></view>
+    </view>
+  </view>
+  <swiper class="swiperContainer" bindchange="swiperChangeFn" current="{{swiperMenuData.swiperIndex}}">
+      <block wx:for="{{swiperData}}">
+          <swiper-item class="swiperItem">
+              <scroll-view class="mainSwiperContainer" scroll-y="true">
+                  <template is="blog" data="{{list:item.list}}"/>
+              </scroll-view>
+          </swiper-item>
+        </block>
+  </swiper>
+</view>

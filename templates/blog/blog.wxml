@@ -1,0 +1,39 @@
+<template name="blog">
+    <view class="blogListContainer">
+        <block wx:for="{{list}}">
+            <view class="simBlogContainer">
+                <view class="blogInfoContainer">
+                    <view class="userInfoContainer">
+                        <image class="userLogo" src="https://static-oven.b0.upaiyun.com/static-image/mylogo.png"></image>
+                        <view class="userName">张三李四</view>
+                    </view>
+                    <view class="cloumnInfoContainer">webp/前端</view>
+                </view>
+                <view class="blogBodyontainer">
+                    <view class="blogContentContainer">
+                        <view class="blogTitleContainer">{{item.title}}</view>
+                        <view class="blogSummaryContainer">{{item.summary}}</view>
+                    </view>
+                    <view class="blogImageContainer">
+                        <image class="blogImage" src="https://static-oven.b0.upaiyun.com/static-image/simProductImage.jpg"></image>
+                    </view>
+                </view>
+                <view class="blogActionContainer">
+                    <view class="actionContainer">
+                        <view class="actionContainer loveContainer">
+                            <image src="/public/icon/love.png"></image>
+                            <view>222</view>
+                        </view>
+                        <view class="actionContainer commentContainer">
+                            <image src="/public/icon/comment.png"></image>
+                            <view>评论</view>
+                        </view>
+                    </view>
+                    <view class="blogTimeContainer">
+                        21:20:46
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</template>
