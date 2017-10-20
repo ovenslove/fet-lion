@@ -1,0 +1,31 @@
+.switchContainer{
+    width: 80rpx;
+    height: 40rpx;
+    background: #efefef;
+    border-radius: 20rpx;
+    position: relative;
+    border: 1rpx solid #eee;
+    transition: all ease-in-out 0.2s;    
+}
+.switchContainer.active{
+    background: #33ccff;
+}
+.switchContainer .slideBarContainer{
+    width: 10rpx;
+    height:10rpx;
+    border-radius: 50%;
+    transition: all ease-in-out 0.2s;
+    position: absolute;    
+    top: 2rpx;
+    background: #fff;
+}
+.switchContainer .slideBarContainer.disActive{
+    width: 36rpx;
+    height:36rpx;
+    left: 2rpx;
+}
+.switchContainer .slideBarContainer.active{
+    width: 36rpx;
+    height:36rpx;
+    left: 40rpx;
+}

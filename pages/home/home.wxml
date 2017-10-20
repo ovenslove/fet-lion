@@ -35,7 +35,7 @@
             </view>
             <view class="sideContainer">999篇</view>
         </view>
-        <view class="simClumnContainer">
+        <view class="simClumnContainer" bindtap="goMarkSettingFn">
             <view class="mainContainer">
                 <view class="settingContainer">
                     <image src="/public/icon/mark.png"></image>

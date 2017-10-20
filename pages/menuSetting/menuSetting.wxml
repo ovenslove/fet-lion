@@ -1,0 +1,17 @@
+<import src="/templates/switch/switch.wxml"/>
+
+<view class="menuSettingContainer">
+    <view class="listGroupContainer">
+        <view class="listItemContainer" wx:for="{{menuData}}">
+            <view class="mainContainer">
+                <view class="menuNameContainer">
+                        {{item.name}}
+                </view>
+            </view>
+            <view class="sideContainer">
+                <template is="switch" data="{{checked:item.show,index,lock:item.lock}}" />
+            </view>
+        </view>
+    </view>
+
+</view>

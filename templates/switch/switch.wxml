@@ -1,0 +1,5 @@
+<template name="switch">
+    <view class="switchContainer {{checked?'active':''}}" catchtap="switchChangeFn" data-index="{{index}}">
+        <view class="slideBarContainer {{checked?'active':'disActive'}}"></view>
+    </view>
+</template>

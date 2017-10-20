@@ -1,22 +1,24 @@
 Page({
     data: {
-        loginStatus:false
+        loginStatus: false
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
     },
-    goUserInfo:function(){
+    goUserInfo: function () {
         wx.navigateTo({
             url: '/pages/user/user',
-            success: function(res){
-                // success
-            },
-            fail: function() {
-                // fail
-            },
-            complete: function() {
-                // complete
-            }
+            success: function (res) {},
+            fail: function () {},
+            complete: function () {}
+        })
+    },
+    goMarkSettingFn: function () {
+        wx.navigateTo({
+            url: '/pages/markSetting/markSetting',
+            success: function (res) {},
+            fail: function () {},
+            complete: function () {}
         })
     },
     onReady: function () {

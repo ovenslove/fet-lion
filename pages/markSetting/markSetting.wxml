@@ -1,0 +1,62 @@
+<view class="markContainer">
+    <view class="tabContainer">
+        <view class="simTabContainer {{tabIndex===0?'active':''}}" data-index="0" bindtap="tabChangeFn">已关注标签</view>
+        <view class="simTabContainer {{tabIndex===1?'active':''}}" data-index="1" bindtap="tabChangeFn">全部标签</view>
+    </view>
+    <view class="bodyContainer">
+        <swiper class="swiperContainer" bindchange="swiperChangeFn" current="{{tabIndex}}">
+            <swiper-item class="simSwiperContainer">
+                <scroll-view class="listGroupContainer" scroll-y="true">
+                    <view class="listItemContainer" wx:for="{{markData.activeData}}">
+                        <view class="imageContainer">
+                            <image class="image" src="{{item.imgUrl}}"></image>
+                        </view>
+                        <view class="menuContentContainer">
+                            <view class="markNameContainer">{{item.markName}}</view>
+                            <view class="markInfoContainer">
+                                <view class="careNumber">{{item.careNumber}}人关注</view>
+                                <view>·</view>
+                                <view class="articleNumber">{{item.articleNumber}}篇文章</view>
+                            </view>
+                        </view>
+                        <view class="actionContainer {{item.careStatus?'active':''}}" data-type="1" data-index="{{index}}" bindtap="markTapFn" >{{item.careStatus?'已关注':'关注'}}</view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item class="simSwiperContainer">
+                <scroll-view class="listGroupContainer" scroll-y="true">
+                    <view class="titleContainer">推荐标签</view>
+                    <view class="listItemContainer" wx:for="{{markData.allData.post}}">
+                        <view class="imageContainer">
+                            <image class="image" src="{{item.imgUrl}}"></image>
+                        </view>
+                        <view class="menuContentContainer">
+                            <view class="markNameContainer">{{item.markName}}</view>
+                            <view class="markInfoContainer">
+                                <view class="careNumber">{{item.careNumber}}人关注</view>
+                                <view>·</view>
+                                <view class="articleNumber">{{item.articleNumber}}篇文章</view>
+                            </view>
+                        </view>
+                        <view class="actionContainer {{item.careStatus?'active':''}}" data-type="11" data-index="{{index}}" bindtap="markTapFn" >{{item.careStatus?'已关注':'关注'}}</view>
+                    </view>
+                    <view class="titleContainer">可能感兴趣的标签</view>                    
+                    <view class="listItemContainer" wx:for="{{markData.allData.care}}">
+                            <view class="imageContainer">
+                                <image class="image" src="{{item.imgUrl}}"></image>
+                            </view>
+                            <view class="menuContentContainer">
+                                <view class="markNameContainer">{{item.markName}}</view>
+                                <view class="markInfoContainer">
+                                    <view class="careNumber">{{item.careNumber}}人关注</view>
+                                    <view>·</view>
+                                    <view class="articleNumber">{{item.articleNumber}}篇文章</view>
+                                </view>
+                            </view>
+                            <view class="actionContainer {{item.careStatus?'active':''}}" data-type="12" data-index="{{index}}" bindtap="markTapFn" >{{item.careStatus?'已关注':'关注'}}</view>
+                        </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

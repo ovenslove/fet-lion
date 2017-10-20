@@ -5,12 +5,14 @@
     "pages/search/search",
     "pages/news/news",
     "pages/logs/logs",    
-    "pages/user/user"    
+    "pages/user/user",
+    "pages/menuSetting/menuSetting",
+    "pages/markSetting/markSetting"    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "攻城狮的FET",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

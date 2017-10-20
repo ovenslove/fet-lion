@@ -29,3 +29,4 @@ page{
 
 
 @import "/templates/dialog/dialog.wxss";
+@import "/templates/switch/switch.wxss";
