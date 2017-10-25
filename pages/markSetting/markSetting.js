@@ -140,8 +140,9 @@ Page({
     },
     tabChangeFn: function (e) {
         let _index = e.currentTarget.dataset.index || e.target.dataset.index;
+        console.log(_index)
         this.setData({
-            "tabIndex": _index
+            "tabIndex": parseInt(_index)
         })
     },
     swiperChangeFn: function (e) {

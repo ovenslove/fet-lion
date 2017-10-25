@@ -1,3 +1,38 @@
-<view class="mainContainer">
-    搜索结果
+<view class="searchContainer">
+    <view class="searchInputContainer">
+        <view class="seachFixedContainer">
+            <view class="inputContainer">
+                <image src="/public/icon/search-default.png"></image>
+                <view>搜索</view>
+            </view>
+        </view>
+    </view>
+    <view class="bannerContainer">
+        <swiper class="swiperContainer" indicator-dots="ture" indicator-color="#eee" indicator-active-color="#33ccff" autoplay="true"
+            circular="true">
+            <block wx:for="{{3}}">
+                <swiper-item class="swiperItemContainer">
+                    <image class="bannerImage" src="https://static-oven.b0.upaiyun.com/static-image/banner-750x300.jpg"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="moduleContainer">
+        <view class="simModuleContainer" wx:for="{{4}}">
+            <view class="simModuleBodyContainer">
+                <image class="moduleIcon" src="/public/icon/setting.png"></image>
+                <view class="moduleName">设置</view>
+            </view>
+        </view>
+    </view>
+    <view class="postContainer">
+        <view class="hotPostContainer">
+            <view class="simBlogContainer" wx:for="{{20}}">
+                <view class="mainContainer">llll</view>
+                <view class="imageContainer">
+                    <image src="https://static-oven.b0.upaiyun.com/static-image/simProductImage.jpg"></image>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
